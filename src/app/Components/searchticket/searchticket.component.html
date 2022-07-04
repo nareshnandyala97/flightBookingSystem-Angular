@@ -1,0 +1,44 @@
+<form action="/action_page.php" class="was-validated">
+<div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+ <div class="form-group col-md-4">
+    <label>Search by email</label>
+    <input type="text" class="form-control" [(ngModel)]="searchby" name="searchby" required>
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field</div>
+    <button (click)="searchticketbyemail()"type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Search</button>
+</div>
+<br/>
+    <div class="form-group col-md-4">
+        <label>Search by PNR</label>
+        <input type="text" class="form-control" [(ngModel)]="searchbyPNR" name="searchbyPNR" required>
+        <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field</div>
+        <!-- <span *ngIf="searchbyPNR.invalid && searchbyPNR.touched"
+        class="error">pnr number is required</span> -->
+        <!-- <<p align="right"> -->
+            <button (click)="searchticketbyPNR()"type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Search</button>
+            <!-- </p> -->
+    </div>
+    
+<div class="container-fluid">
+    <table class="table table-hover mt-3">
+      
+      <tbody>
+      
+    
+      <tr *ngFor="let flight of flightObjList">
+      
+        <td> <b>Airline Name  </b><br>{{flight.airlineName}}</td>
+        <td><b>Origin</b><br>{{flight.origin}}</td>
+        <td><b>Destination</b><br>{{flight.destination}}</td>
+        <td><b>Flight Number</b><br>{{flight.flightNumber}}</td>
+        <td><b>PNR Number</b><br>{{flight.pnrNumber}}</td>
+        <!-- <td><b>Action</b><br><button class="btn btn-primary ">Download Ticket</button></td> -->
+        <td><b>Action</b><br><button (click)="cancelTicket(flight)"class="btn btn-primary ">Cancel Ticket</button></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</form>

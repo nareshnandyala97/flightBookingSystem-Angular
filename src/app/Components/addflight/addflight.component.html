@@ -1,0 +1,79 @@
+<p align="right">
+<button (click)="openDialog()"type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Add Flight</button>
+</p>
+    <table class="table table-hover mt-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Flight Name</th>
+                <th scope="col">Origin</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Block</th>
+                <th scope="col">Flight Number</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flightObjList;let i=index">
+               <td>{{i+1}}</td>
+                <td>{{flight.airlineName}}</td>
+                <td>{{flight.origin}}</td>
+                <td>{{flight.destination}}</td>
+                <td>{{flight.startDate| date}}</td>
+                <td>{{flight.endDate| date}}</td>
+                <td>{{flight.block}}</td>
+                <td>{{flight.flightNumber}}</td>
+                <td>{{flight.cost}}</td>
+                <td>
+                    <button class="btn btn-info" (click)=editFlight(flight)>Edit</button>
+                    <button class="btn btn-danger mx-3 "(click)=deleteFlight(flight)>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Launch demo modal
+    </button> -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <td><button (click)="updateFlight(flight.flightNumber)" class="btn btn-success"> <span class="glyphicon glyphicon-pencil"></span>&nbsp;Update</button></td>
+        <td> <button type="button"  (click)="deleteFlight(flight.flightNumber)" class="btn btn-danger">  <span class="glyphicon glyphicon-remove-circle"></span>&nbsp; Delete</button></td>
+        <td> <button type="button"  (click)="ViewFlightDetails(flight.flightNumber)" class="btn btn-info"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;View</button></td>
+     -->
+        <!-- <script>
+        $('#myModal').on('click', function () {
+            $('#exampleModal').focus();
+        })
+    </script> -->
+
+    <!-- <div class="container mt-5">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Contact us</button>
+        <div class="modal" id="myModal"></div>
+
+    </div> -->

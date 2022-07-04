@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "name": "Rakesh",
+      "age": 50,
+      "Gender": "Male",
+      "id": 1
+    },
+    {
+      "name": "Nishant",
+      "age": "32",
+      "Gender": "Male",
+      "id": 2
+    },
+    {
+      "name": "Hitesh",
+      "age": "43`",
+      "Gender": "Male",
+      "id": 3
+    },
+    {
+      "name": "Supriya",
+      "age": "13",
+      "Gender": "Male",
+      "id": 4
+    },
+    {
+      "name": "nishant",
+      "age": "123",
+      "Gender": "Male",
+      "id": 5
+    },
+    {
+      "name": "nishant123",
+      "age": "22",
+      "Gender": "Male",
+      "id": 6
+    },
+    {
+      "name": "Jenny",
+      "age": "5",
+      "Gender": "Female",
+      "id": 7
+    },
+    {
+      "name": "Jeremy ",
+      "age": "70",
+      "Gender": "Male",
+      "id": 8
+    },
+    {
+      "name": "naresh",
+      "age": "30",
+      "Gender": "Male",
+      "id": 9
+    }
+  ]
+}

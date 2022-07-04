@@ -1,0 +1,61 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="container">
+        <!-- <div class="card shadow-2-strong card-registration" style="border-radius: 15px;"> -->
+        <div class="form-group col-md-4">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="bookingInfo.name" name="name" class="form-control">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>No. Of Seats</label>
+            <input type="number" [(ngModel)]="bookingInfo.bookedSeats" name="bookedSeats" class="form-control">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Email</label>
+            <input type="text" [(ngModel)]="bookingInfo.email" name="email" class="form-control">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Meal</label>
+            <input type="text" [(ngModel)]="bookingInfo.meal" name="meal" class="form-control">
+        </div>
+        <h1>user Details</h1>
+        <div class="row" *ngFor="let obj of dataarray">
+            <div class="form-group col-md-4">
+                <label>Name</label>
+                <input type="text" [(ngModel)]="obj.name" name="gender" class="form-control">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label>Age</label>
+                <input type="text" [(ngModel)]="obj.age" name="age" class="form-control">
+            </div>
+
+            <div class="form-group col-md-2">
+                <label>Gender</label>
+                <input type="text" [(ngModel)]="obj.gender" name="gender" class="form-control">
+            </div>
+        </div>
+        <span (click)="addForm()" class="btn btn-success">+</span>
+        <button class="btn btn-primary"> Book Flight</button>
+    <!-- </div> -->
+    </div>
+</form>
+
+<!-- <div class="form-group col mb-4">
+
+    <div class="form-outline">
+      <input type="text" [(ngModel)]="userDetails.name" name="name"   class="form-control form-control-lg" />
+      <label class="form-label" for="airlineName">Airline Name</label>
+    </div>
+
+  </div>
+  <div class="col-md-6 mb-4">
+
+    <div class="form-outline">
+      <input type="text"  [(ngModel)]="userDetails.gender" name="gender" class="form-control form-control-lg" />
+      <label class="form-label" for="flightNumber">Flight Name</label>
+    </div>
+
+  </div> -->

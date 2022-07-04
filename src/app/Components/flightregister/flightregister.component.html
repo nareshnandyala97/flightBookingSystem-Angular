@@ -1,0 +1,127 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Register Flight</h3>
+            <form>
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" [(ngModel)]="flightObj.airlineName" name="airlineName"  id="airlineName" class="form-control form-control-lg" />
+                    <label class="form-label" for="airlineName">Airline Name</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text"  [(ngModel)]="flightObj.flightNumber" name="flightNumber" id="flightNumber" class="form-control form-control-lg" />
+                    <label class="form-label" for="flightNumber">Flight Name</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" [(ngModel)]="flightObj.origin" name="origin" id="origin" class="form-control form-control-lg" />
+                    <label for="origin" class="form-label">From</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" [(ngModel)]="flightObj.destination" name="destination" id="destination" class="form-control form-control-lg" />
+                    <label for="destination" class="form-label">To</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="date" [(ngModel)]="flightObj.startDate" name="startDate" id="startDate" class="form-control form-control-lg" />
+                    <label for="startDate" class="form-label">Start Date</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline datepicker w-100">
+                    <input type="date" [(ngModel)]="flightObj.endDate" name="endDate" id="endDate" class="form-control form-control-lg" />
+                    <label for="endDate" class="form-label">End Date</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" [(ngModel)]="flightObj.businessClass" name="businessClass" id="businessClass" class="form-control form-control-lg" />
+                    <label for="businessClass" class="form-label">Business Class</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" [(ngModel)]="flightObj.economyClass" name="economyClass" id="economyClass" class="form-control form-control-lg" />
+                    <label for="economyClass" class="form-label">Economy Class</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" [(ngModel)]="flightObj.cost" name="cost" id="cost" class="form-control form-control-lg" />
+                    <label for="cost" class="form-label">Ticket Price</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="text" [(ngModel)]="flightObj.block" name="block" id="block" class="form-control form-control-lg" />
+                    <label for="block" class="form-label">Block Flight</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+
+                  <select class="select form-control-lg" [(ngModel)]="flightObj.meal" name="meal" id="meal">
+                    <option value="1" disabled>Choose Option</option>
+                    <option value="Veg">Veg</option>
+                    <option value="Non-Veg">Non-Veg</option>
+                    <option value="None">None</option>
+                  </select>
+                  <label class="form-label select-label">Choose Meal</label>
+
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2">
+                <input (click)="onSubmit()"class="btn btn-primary btn-lg" type="submit" value="Submit" />
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
